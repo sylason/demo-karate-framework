@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"5bddc94f-2a70-4cc1-adf3-1e75ea1bb405",karate_version:"1.4.0",karate_meta:null});
+  }
+});
+</script>
+
+    <title>examples.products.delete-product</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-07-06 01:24:23 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:5]"><span>[1:5]</span> <span>Successfully delete a product</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">examples/products/delete-product.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">dummyjson.com - Products API - DELETE a product by Id</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:5]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:5]</span>
+                <span class="scenario-name">Successfully delete a product</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>2214</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:5]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:5]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.3">
+      <div class="step-ref bg-step">3</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://dummyjson.com/products&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.3">01:24:19.342 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref passed">6</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref passed">7</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method delete</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2049</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.7">01:24:20.070 request:
+1 &gt; DELETE https://dummyjson.com/products/1
+1 &gt; Host: dummyjson.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.7)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+01:24:21.431 response time in milliseconds: 1356
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Sat, 05 Jul 2025 18:24:21 GMT
+1 &lt; Etag: W/&quot;61e-WSQ8Y2I+kVwlsRXGo+t69UTeDmM&quot;
+1 &lt; Server: railway-edge
+1 &lt; Strict-Transport-Security: max-age=15552000; includeSubDomains
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: Cats on Keyboards
+1 &lt; X-Railway-Edge: railway/us-west2
+1 &lt; X-Railway-Request-Id: 8BdUjEyKT0CF5Xjdn6XIxQ
+1 &lt; X-Ratelimit-Limit: 100
+1 &lt; X-Ratelimit-Remaining: 99
+1 &lt; X-Ratelimit-Reset: 1751739865
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Transfer-Encoding: chunked
+{&quot;id&quot;:1,&quot;title&quot;:&quot;Essence Mascara Lash Princess&quot;,&quot;description&quot;:&quot;The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.&quot;,&quot;category&quot;:&quot;beauty&quot;,&quot;price&quot;:9.99,&quot;discountPercentage&quot;:10.48,&quot;rating&quot;:2.56,&quot;stock&quot;:99,&quot;tags&quot;:[&quot;beauty&quot;,&quot;mascara&quot;],&quot;brand&quot;:&quot;Essence&quot;,&quot;sku&quot;:&quot;BEA-ESS-ESS-001&quot;,&quot;weight&quot;:4,&quot;dimensions&quot;:{&quot;width&quot;:15.14,&quot;height&quot;:13.08,&quot;depth&quot;:22.99},&quot;warrantyInformation&quot;:&quot;1 week warranty&quot;,&quot;shippingInformation&quot;:&quot;Ships in 3-5 business days&quot;,&quot;availabilityStatus&quot;:&quot;In Stock&quot;,&quot;reviews&quot;:[{&quot;rating&quot;:3,&quot;comment&quot;:&quot;Would not recommend!&quot;,&quot;date&quot;:&quot;2025-04-30T09:41:02.053Z&quot;,&quot;reviewerName&quot;:&quot;Eleanor Collins&quot;,&quot;reviewerEmail&quot;:&quot;eleanor.collins@x.dummyjson.com&quot;},{&quot;rating&quot;:4,&quot;comment&quot;:&quot;Very satisfied!&quot;,&quot;date&quot;:&quot;2025-04-30T09:41:02.053Z&quot;,&quot;reviewerName&quot;:&quot;Lucas Gordon&quot;,&quot;reviewerEmail&quot;:&quot;lucas.gordon@x.dummyjson.com&quot;},{&quot;rating&quot;:5,&quot;comment&quot;:&quot;Highly impressed!&quot;,&quot;date&quot;:&quot;2025-04-30T09:41:02.053Z&quot;,&quot;reviewerName&quot;:&quot;Eleanor Collins&quot;,&quot;reviewerEmail&quot;:&quot;eleanor.collins@x.dummyjson.com&quot;}],&quot;returnPolicy&quot;:&quot;No return policy&quot;,&quot;minimumOrderQuantity&quot;:48,&quot;meta&quot;:{&quot;createdAt&quot;:&quot;2025-04-30T09:41:02.053Z&quot;,&quot;updatedAt&quot;:&quot;2025-04-30T09:41:02.053Z&quot;,&quot;barcode&quot;:&quot;5784719087687&quot;,&quot;qrCode&quot;:&quot;https://cdn.dummyjson.com/public/qr-code.png&quot;},&quot;images&quot;:[&quot;https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp&quot;],&quot;thumbnail&quot;:&quot;https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp&quot;,&quot;isDeleted&quot;:true,&quot;deletedOn&quot;:&quot;2025-07-05T18:24:21.056Z&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">49</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">01:24:21.496 [print] {
+  &quot;id&quot;: 1,
+  &quot;title&quot;: &quot;Essence Mascara Lash Princess&quot;,
+  &quot;description&quot;: &quot;The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.&quot;,
+  &quot;category&quot;: &quot;beauty&quot;,
+  &quot;price&quot;: 9.99,
+  &quot;discountPercentage&quot;: 10.48,
+  &quot;rating&quot;: 2.56,
+  &quot;stock&quot;: 99,
+  &quot;tags&quot;: [
+    &quot;beauty&quot;,
+    &quot;mascara&quot;
+  ],
+  &quot;brand&quot;: &quot;Essence&quot;,
+  &quot;sku&quot;: &quot;BEA-ESS-ESS-001&quot;,
+  &quot;weight&quot;: 4,
+  &quot;dimensions&quot;: {
+    &quot;width&quot;: 15.14,
+    &quot;height&quot;: 13.08,
+    &quot;depth&quot;: 22.99
+  },
+  &quot;warrantyInformation&quot;: &quot;1 week warranty&quot;,
+  &quot;shippingInformation&quot;: &quot;Ships in 3-5 business days&quot;,
+  &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+  &quot;reviews&quot;: [
+    {
+      &quot;rating&quot;: 3,
+      &quot;comment&quot;: &quot;Would not recommend!&quot;,
+      &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+      &quot;reviewerName&quot;: &quot;Eleanor Collins&quot;,
+      &quot;reviewerEmail&quot;: &quot;eleanor.collins@x.dummyjson.com&quot;
+    },
+    {
+      &quot;rating&quot;: 4,
+      &quot;comment&quot;: &quot;Very satisfied!&quot;,
+      &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+      &quot;reviewerName&quot;: &quot;Lucas Gordon&quot;,
+      &quot;reviewerEmail&quot;: &quot;lucas.gordon@x.dummyjson.com&quot;
+    },
+    {
+      &quot;rating&quot;: 5,
+      &quot;comment&quot;: &quot;Highly impressed!&quot;,
+      &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+      &quot;reviewerName&quot;: &quot;Eleanor Collins&quot;,
+      &quot;reviewerEmail&quot;: &quot;eleanor.collins@x.dummyjson.com&quot;
+    }
+  ],
+  &quot;returnPolicy&quot;: &quot;No return policy&quot;,
+  &quot;minimumOrderQuantity&quot;: 48,
+  &quot;meta&quot;: {
+    &quot;createdAt&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+    &quot;updatedAt&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+    &quot;barcode&quot;: &quot;5784719087687&quot;,
+    &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+  },
+  &quot;images&quot;: [
+    &quot;https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp&quot;
+  ],
+  &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp&quot;,
+  &quot;isDeleted&quot;: true,
+  &quot;deletedOn&quot;: &quot;2025-07-05T18:24:21.056Z&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.id == 1</span>
+      </div>
+    </div>
+    <div class="time-cell passed">73</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.title == &#39;Essence Mascara Lash Princess&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.isDeleted == true</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
