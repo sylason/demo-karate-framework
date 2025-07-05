@@ -41,9 +41,4 @@ This command will automatically download the necessary libraries, compile and ru
 mvn test
 ```
 After running, a detailed report will be generated in the `target/karate-reports` directory.
-
-## View the Test Report
-
-**[=> Click here to see the Live Test Report](https://github.com/sylason/demo-karate-framework/blob/main/target/karate-reports/karate-summary.html)**
-
 ---
