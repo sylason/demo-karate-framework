@@ -44,6 +44,6 @@ After running, a detailed report will be generated in the `target/karate-reports
 
 ## View the Test Report
 
-**[=> Click here to see the Live Test Report]([https://github.com/sylason/demo-karate-framework/target/karate-reports/karate-summary.html)**
+**[=> Click here to see the Live Test Report](https://github.com/sylason/demo-karate-framework/blob/main/target/karate-reports/karate-summary.html)**
 
 ---
