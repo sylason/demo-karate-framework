@@ -1,3 +1,4 @@
 examples\products\ProductsRunner.class
 examples\ExamplesTest.class
+examples\loginUI\ProductsRunner.class
 examples\users\UsersRunner.class
