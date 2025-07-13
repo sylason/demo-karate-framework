@@ -23,15 +23,17 @@ Background:
 		When click("//*[@id='login-button']")
 		* driver quit
 
+
+	# @ignore
 	Scenario Outline: Verify login results for different users
 		When call read('LoginPage.feature@action_attemptLogin') {username: '<username>',password: '<password>' }
 
-		* if (type == 'success') { driver.waitForUrl('https://www.saucedemo.com/inventory.html') }
-		* if (type == 'failure') { karate.match(driver.text(loginPage.errorDisplay), message) }
+		# * if (type == 'success') { driver.waitForUrl('https://www.saucedemo.com/inventory.html') }
+		# * if (type == 'failure') { karate.match(driver.text(loginPage.errorDisplay), message) }
 		* eval
 		"""
 		if (type == 'success') {
-		driver.waitForUrl('https://www.saucedemo.com/inventory.html');
+		driver.waitForUrl(homepageURL);
 		} else {
 		karate.match(driver.text(loginPage.errorDisplay), message);
 		}

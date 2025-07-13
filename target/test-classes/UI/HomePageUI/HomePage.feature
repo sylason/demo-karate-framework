@@ -5,21 +5,8 @@ Feature: Reusable Page Actions for the Inventory Page or
 
 	@action_sortProducts
 	Scenario: Action - Sort the product list
-		* driver.waitFor(homePage.sortBtn)
-		And select(homePage.sortBtn, sortOption)
-
-		# * click(homePage.sortBtn)
-
-		# # Bước 2: Xây dựng locator động cho thẻ <option> chúng ta muốn click.
-		# # Locator này sẽ tìm một thẻ <option> có thuộc tính 'value' bằng với giá trị
-		# # 'sortOption' được truyền vào (ví dụ: 'za', 'lohi').
-		# * def optionLocator = `option[value=${sortOption}]`
-
-		# # Bước 3: Click vào thẻ <option> cụ thể đó.
-		# # Đây là hành động mô phỏng người dùng thật và sẽ kích hoạt sự kiện 'onChange'.
-	    # * click(optionLocator)
-
-		* delay(2000)
+		* waitFor(homePage.sortBtn)
+		* script(homePage.sortBtn, "e => { e.value = '" + sortOption + "'; e.dispatchEvent(new Event('change', { bubbles: true })) }")
 
 	@action_addProductToCart
 	Scenario: Action - Add a specific product to the cart
@@ -27,7 +14,8 @@ Feature: Reusable Page Actions for the Inventory Page or
 		* def buttonIdValue = 'add-to-cart-' + productName.toLowerCase().replace(/ /g, '-')
 		* def buttonXpath = `//*[@id='${buttonIdValue}']`
 
-		When click(buttonXpath)
+		* retry(5, 10000).waitForEnabled(buttonXpath).click()
+
 
 
 	@action_verifyCartBadge
@@ -39,37 +27,32 @@ Feature: Reusable Page Actions for the Inventory Page or
 
 	@action_openBurgerMenu
 	Scenario: Action - Open burger menu
-		* click(homePage.burgerMenuBtn)
-		# * waitFor(homePage.menuWrapShown)
+		* waitForEnabled(homePage.burgerMenuBtn).click()
+		# * click(homePage.burgerMenuBtn)
+		* waitFor(homePage.menuWrapShown)
 
 	@action_logoutBtn
 	Scenario: Action - Logout
-		# * click(homePage.burgerMenuBtn)
-		# * waitFor(homePage.menuWrapShown)
 		* call read('HomePage.feature@action_openBurgerMenu')
-		* waitFor(homePage.logoutBtn)
-		* click(homePage.logoutBtn)
+		* waitFor(homePage.logoutBtn).click()
 
 
 	@action_aboutBtn
 	Scenario: Action - go to about page
-		* click(homePage.burgerMenuBtn)
+		* call read('HomePage.feature@action_openBurgerMenu')
 		# * waitFor(homePage.menuWrapShown)
-		* waitFor(homePage.aboutBtn)
-		* click(homePage.aboutBtn)
+		* waitFor(homePage.aboutBtn).click()
 
 
 	@action_resetStateLink
 	Scenario: Action - reset
-		* click(homePage.burgerMenuBtn)
+		* call read('HomePage.feature@action_openBurgerMenu')
 		# * waitFor(homePage.menuWrapShown)
-		* waitFor(homePage.resetStateLink)
-		* click(homePage.resetStateLink)
+		* waitFor(homePage.resetStateLink).click()
 
 	@action_closeMenuBtn
 	Scenario: Action - close menu
-		* waitFor(homePage.closeMenuBtn)
-		* click(homePage.closeMenuBtn)
+		* waitForEnabled(homePage.closeMenuBtn).click()
 		* waitFor(homePage.menuWrapHidden)
 
 	@action_verifyMenuIsHidden
@@ -78,3 +61,15 @@ Feature: Reusable Page Actions for the Inventory Page or
 		* match menuIsHidden == true
 
 
+	@action_clickFirstProduct
+	Scenario: Action - Click on the first product in the list
+		# * def firstProductLinkLocator = driver.text(homePage.productNames)
+		* def firstProductLinkLocator = homePage.productNameLinks
+
+		# * waitFor(firstProductLinkLocator).click()
+		# * waitFor(homePage.productNameLinks).click()
+		* click(homePage.productNameLinks)
+
+	@action_backToProduct
+	Scenario: Action - Click on back to product page
+		* waitFor(homePage.backToProductsButton).click()

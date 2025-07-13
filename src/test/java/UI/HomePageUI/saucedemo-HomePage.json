@@ -10,13 +10,27 @@
   "menuWrapHidden": "div.bm-menu-wrap[aria-hidden='true']",
 
   "addCartSauceLabsBackpackBtn": "#add-to-cart-sauce-labs-backpack",
-  "sortBtn": "[data-test=product_sort_container]",
+  "sortBtn": ".product_sort_container",
 
-  "shoppingCartBtn": "#shopping_cart_container",
+  "shoppingCartBtn": "//*[@id='shopping_cart_container']/a",
   "shoppingCartBadge": ".shopping_cart_badge",
   "continueShoppingBtn": "//*[@id='continue-shopping']",
   "checkoutBtn": "//*[@id='checkout']",
 
   "productNames": ".inventory_item_name",
-  "productPrices": ".inventory_item_price"
+  "productPrices": ".inventory_item_price",
+
+  "backToProductsBtn": "#back-to-products",
+  "productLinks": "#item_4_img_link",
+
+  "checkoutBtn": "#checkout",
+
+  "checkoutFirstNameInput": "#first-name",
+  "lastNameInput": "#last-name",
+  "postalCodeInput": "#postal-code",
+  "continueBtn": "#continue",
+
+  "finishBtn": "#finish",
+
+  "backHomeBtn": "#back-to-products"
 }

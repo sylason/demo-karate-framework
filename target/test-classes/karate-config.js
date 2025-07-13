@@ -9,6 +9,7 @@ function fn() {
     myVarName: "someValue",
     dummyjsonURL: "https://dummyjson.com/",
     saucedemoURL: "https://saucedemo.com/",
+    saucedemoHomePageURL: "https://www.saucedemo.com/inventory.html",
   };
   if (env == "dev") {
     // customize

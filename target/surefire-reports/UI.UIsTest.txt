@@ -1,20 +1,75 @@
 -------------------------------------------------------------------------------
 Test set: UI.UIsTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 86.243 s <<< FAILURE! - in UI.UIsTest
-testParallel  Time elapsed: 86.216 s  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 258.038 s <<< FAILURE! - in UI.UIsTest
+testParallel  Time elapsed: 257.999 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 js failed:
 >>>>
-01: waitFor(saucedemoURL)
+01: retry(5, 10000).waitForEnabled(buttonXpath).click()
 <<<<
-org.graalvm.polyglot.PolyglotException: waitUntil (js): failed after 3 retries and 21144 milliseconds
+org.graalvm.polyglot.PolyglotException: waitUntil (js): failed after 5 retries and 110298 milliseconds
+- com.intuit.karate.driver.DriverOptions.retry(DriverOptions.java:517)
+- com.intuit.karate.driver.DevToolsDriver.waitUntil(DevToolsDriver.java:777)
+- com.intuit.karate.driver.DriverOptions.waitUntil(DriverOptions.java:674)
+- com.intuit.karate.driver.Driver.waitUntil(Driver.java:283)
+- com.intuit.karate.driver.Driver.waitForEnabled(Driver.java:252)
+- <js>.:program(Unnamed:1)
+
+classpath:UI/HomePageUI/HomePage.feature:17
+classpath:UI/HomePageUI/Home.feature:18
+match failed: EQUALS
+  $ | not equal | actual array length is not equal to expected - 0:6 (LIST:LIST)
+  []
+  ["Test.allTheThings() T-Shirt (Red)","Sauce Labs Onesie","Sauce Labs Fleece Jacket","Sauce Labs Bolt T-Shirt","Sauce Labs Bike Light","Sauce Labs Backpack"]
+
+
+classpath:UI/HomePageUI/Home.feature:53
+match failed: EQUALS
+  $ | not equal | actual array length is not equal to expected - 0:6 (LIST:LIST)
+  []
+  [7.99,9.99,15.99,15.99,29.99,49.99]
+
+
+classpath:UI/HomePageUI/Home.feature:76
+js failed:
+>>>>
+01: waitFor(homePage.sortBtn)
+<<<<
+org.graalvm.polyglot.PolyglotException: waitUntil (js): failed after 5 retries and 15063 milliseconds
 - com.intuit.karate.driver.DriverOptions.retry(DriverOptions.java:517)
 - com.intuit.karate.driver.DevToolsDriver.waitUntil(DevToolsDriver.java:777)
 - com.intuit.karate.driver.DriverOptions.waitForAny(DriverOptions.java:700)
 - com.intuit.karate.driver.Driver.waitFor(Driver.java:237)
 - <js>.:anonymous(Unnamed:1)
 
-classpath:UI/HomePageUI/Home.feature:73 ==> expected: <0> but was: <1>
+classpath:UI/HomePageUI/HomePage.feature:8
+classpath:UI/HomePageUI/Home.feature:81
+js failed:
+>>>>
+01: waitForEnabled(homePage.burgerMenuBtn).click()
+<<<<
+org.graalvm.polyglot.PolyglotException: waitUntil (js): failed after 5 retries and 33166 milliseconds
+- com.intuit.karate.driver.DriverOptions.retry(DriverOptions.java:517)
+- com.intuit.karate.driver.DevToolsDriver.waitUntil(DevToolsDriver.java:777)
+- com.intuit.karate.driver.DriverOptions.waitUntil(DriverOptions.java:674)
+- com.intuit.karate.driver.Driver.waitUntil(Driver.java:283)
+- com.intuit.karate.driver.Driver.waitForEnabled(Driver.java:252)
+- <js>.:anonymous(Unnamed:1)
+
+classpath:UI/HomePageUI/HomePage.feature:30
+classpath:UI/HomePageUI/Home.feature:106
+js failed:
+>>>>
+01: if (type == 'success') {
+02: driver.waitForUrl(homepageURL);
+03: } else {
+04: karate.match(driver.text(loginPage.errorDisplay), message);
+05: }
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "homepageURL" is not defined
+- <js>.:program(Unnamed:2)
+
+classpath:UI/LoginUI/Login.feature:33 ==> expected: <0> but was: <6>
 	at UI.UIsTest.testParallel(UIsTest.java:17)
 

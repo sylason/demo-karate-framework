@@ -11,3 +11,4 @@ Feature: Login functionality in saucedemo (using JSON as page object model)
 		And input(loginPage.passwordInput, password)
 
 		When click(loginPage.loginButton)
+
