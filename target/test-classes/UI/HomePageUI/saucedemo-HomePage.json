@@ -1,0 +1,22 @@
+{
+  "url": "https://www.saucedemo.com/",
+  "homepageURL": "https://www.saucedemo.com/inventory.html",
+  "burgerMenuBtn": "#react-burger-menu-btn",
+  "aboutBtn": "#about_sidebar_link",
+  "logoutBtn": "#logout_sidebar_link",
+  "resetStateLink": "#reset_sidebar_link",
+  "closeMenuBtn": "#react-burger-cross-btn",
+  "menuWrapShown": "div.bm-menu-wrap[aria-hidden='false']",
+  "menuWrapHidden": "div.bm-menu-wrap[aria-hidden='true']",
+
+  "addCartSauceLabsBackpackBtn": "#add-to-cart-sauce-labs-backpack",
+  "sortBtn": "[data-test=product_sort_container]",
+
+  "shoppingCartBtn": "#shopping_cart_container",
+  "shoppingCartBadge": ".shopping_cart_badge",
+  "continueShoppingBtn": "//*[@id='continue-shopping']",
+  "checkoutBtn": "//*[@id='checkout']",
+
+  "productNames": ".inventory_item_name",
+  "productPrices": ".inventory_item_price"
+}

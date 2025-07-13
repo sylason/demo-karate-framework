@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: UI.UIsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 86.243 s <<< FAILURE! - in UI.UIsTest
+testParallel  Time elapsed: 86.216 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+js failed:
+>>>>
+01: waitFor(saucedemoURL)
+<<<<
+org.graalvm.polyglot.PolyglotException: waitUntil (js): failed after 3 retries and 21144 milliseconds
+- com.intuit.karate.driver.DriverOptions.retry(DriverOptions.java:517)
+- com.intuit.karate.driver.DevToolsDriver.waitUntil(DevToolsDriver.java:777)
+- com.intuit.karate.driver.DriverOptions.waitForAny(DriverOptions.java:700)
+- com.intuit.karate.driver.Driver.waitFor(Driver.java:237)
+- <js>.:anonymous(Unnamed:1)
+
+classpath:UI/HomePageUI/Home.feature:73 ==> expected: <0> but was: <1>
+	at UI.UIsTest.testParallel(UIsTest.java:17)
+

@@ -1,0 +1,7 @@
+{
+  "url": "https://www.saucedemo.com/",
+  "usernameInput": "//*[@id='user-name']",
+  "passwordInput": "//*[@id='password']",
+  "loginButton": "//*[@id='login-button']",
+  "errorDisplay": "//*[@id='login_button_container']/div/form/div[3]"
+}
