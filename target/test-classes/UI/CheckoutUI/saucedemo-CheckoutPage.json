@@ -1,0 +1,11 @@
+{
+  "FirstItemNameInCart": "#item_4_title_link > div",
+  "checkoutBtn": "#checkout",
+  "firstNameInput": "#first-name",
+  "lastNameInput": "#last-name",
+  "postalCodeInput": "#postal-code",
+  "continueBtn": "#continue",
+  "finishBtn": "#finish",
+  "thankYouHeader": "#checkout_complete_container > h2",
+  "backHomeBtn": "#back-to-products"
+}

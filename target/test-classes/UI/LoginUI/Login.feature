@@ -7,6 +7,7 @@ Background:
 	* configure readTimeout = 10000
 	* driver saucedemoURL
 	* def loginPage = read('classpath:UI/LoginUI/saucedemo-LoginPage.json')
+	* def homePage = read('classpath:UI/HomeUI/saucedemo-HomePage.json')
 
 
 	# @ignore
@@ -28,12 +29,11 @@ Background:
 	Scenario Outline: Verify login results for different users
 		When call read('LoginPage.feature@action_attemptLogin') {username: '<username>',password: '<password>' }
 
-		# * if (type == 'success') { driver.waitForUrl('https://www.saucedemo.com/inventory.html') }
-		# * if (type == 'failure') { karate.match(driver.text(loginPage.errorDisplay), message) }
 		* eval
 		"""
 		if (type == 'success') {
-		driver.waitForUrl(homepageURL);
+		driver.waitFor(homePage.inventoryContainer);
+
 		} else {
 		karate.match(driver.text(loginPage.errorDisplay), message);
 		}
